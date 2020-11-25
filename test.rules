@@ -1,0 +1,32 @@
+alert tcp any any -> any 80 (msg:"gilgil.net access"; content:"GET /"; content:"Host: "; content:"gilgil.net"; sid:1; rev:1;)
+alert tcp any any -> any 80 (msg:"test.gilgil.net access1"; content:"GET /"; content:"Host: "; content:"test.gilgil.net"; sid:2; rev:1;)
+alert tcp any any -> any 80 (msg:"test.gilgil.net access2"; content:"GET /"; content:"Host: "; content:"test.gilgil.net"; sid:3; rev:2;)
+
+alert tcp any any -> any 80 (msg:"qt.io access"; content:"GET /"; content:"Host: "; fast_pattern; content:"qt.io"; sid:4; rev:1;)
+
+alert tcp any any -> any 80 (msg:"google.com access"; content:"GET /"; content:"Host: "; content:"google.com"; sid:5; rev:1;)
+alert tcp any any -> any 443 (msg:"google.com tls access"; content:"google.com"; tls_sni; fast_pattern; sid:6; rev:1;)
+
+alert tcp any any -> any 80 (msg:"facebook.com access"; content:"GET /"; content:"Host: "; content:"facebook.com"; sid:7; rev:1;)
+alert tcp any any -> any 443 (msg:"facebook.com tls access"; content:"facebook.com"; tls_sni; fast_pattern; sid:8; rev:1;)
+
+alert tcp any any -> any 80 (msg:"naver.com access"; content:"GET /"; content:"Host: "; content:"naver.com"; sid:9; rev:1;)
+alert tcp any any -> any 443 (msg:"naver.com tls access"; content:"naver.com"; tls_sni; sid:10; rev:1;)
+
+alert tcp any any -> any 80 (msg:"finance.naver.com access"; content:"GET /"; content:"Host: "; content:"finance.naver.com"; tls_sni; sid:11; rev:1;)
+alert tcp any any -> any 443 (msg:"finance.naver.com tls access"; content:"finance.naver.com"; tls_sni; sid:12; rev:1;)
+
+alert tcp any any -> any 443 (msg:"netflix.com access"; content:"netflix.com"; tls_sni; sid:13; rev:1;)
+alert tcp any any -> any 443 (msg:"yahoo.com access"; content:"yahoo.com"; tls_sni; sid:14; rev:1;)
+alert tcp any any -> any 443 (msg:"github.com access"; content:"github.com"; tls_sni; sid:15; rev:1;)
+alert tcp any any -> any 443 (msg:"gitlab.com access"; content:"gitlab.com"; tls_sni; sid:16; rev:1;)
+alert tcp any any -> any 443 (msg:"youtube.com access"; content:"youtube.com"; tls_sni; sid:17; rev:1;)
+alert tcp any any -> any 443 (msg:"daum.net access"; content:"daum.net"; tls_sni; sid:18; rev:1;)
+alert tcp any any -> any 443 (msg:"nate.com access"; content:"nate.com"; tls_sni; sid:19; rev:1;)
+alert tcp any any -> any 443 (msg:"auction.co.kr access"; content:"auction.co.kr"; tls_sni; sid:20; rev:1;)
+alert tcp any any -> any 443 (msg:"11st.co.kr access"; content:"11st.co.kr"; tls_sni; sid:21; rev:1;)
+alert tcp any any -> any 443 (msg:"gmarket.co.kr access"; content:"gmarket.co.kr"; tls_sni; sid:22; rev:1;)
+alert tcp any any -> any 443 (msg:"whatismyipaddress.com access"; content:"whatismyipaddress.com"; tls_sni; sid:23; rev:1;)
+alert tcp any any -> any 443 (msg:"samsung.com access"; content:"samsung.com"; tls_sni; sid:24; rev:1;)
+alert tcp any any -> any 443 (msg:"lg.co.kr access"; content:"lg.co.kr"; tls_sni; sid:25; rev:1;)
+alert tcp any any -> any 80 (msg:"codeforces.com access"; content:"GET /"; content:"Host: "; content:"codeforces.com"; sid:26; rev:1;)
